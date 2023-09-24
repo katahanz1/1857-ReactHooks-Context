@@ -1,6 +1,8 @@
 export const validarNombre = (nombre) => {
-  const length = nombre.length;
-  return length > 1 && length < 30 ? true : false;
+  const length = nombre.length
+  return (length > 1 && length < 25) ? true : false
+  
+  
 };
 
 export const validarApellidos = (apellidos) => {
