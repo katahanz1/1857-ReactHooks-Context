@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 
-const useAuth = (jwt) => {
-  const [isAuth, setIsAuth] = useState(true);
+const useAuth = (jwt) =>{
+  const [isAuth, setIsAuth] = useState(true)
 
-  useEffect(() => {
-    if (jwt.length > 25) {
+  useEffect( () => {
+    if( jwt.length > 25 )
+    {    
       setIsAuth(true);
-    } else {
+    }else{
       setIsAuth(false);
     }
-  }, []);
+  },[])
 
   return isAuth;
-};
+}
 
-export default useAuth;
+export default useAuth
